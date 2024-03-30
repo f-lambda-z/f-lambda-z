@@ -114,7 +114,7 @@ curl_close($ch);
 
 $data = json_decode($response, true);
 
-if (isset($data["data"]["questions"]["edges"])) {
+if (isset($data["data"]["questions"]["edges"][0])) {
   foreach ($data["data"]["questions"]["edges"] as $edge) {
     $question = $edge["node"];
     if (isset($question["answers"]["nodes"])) {
