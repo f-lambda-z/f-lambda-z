@@ -142,7 +142,7 @@ Statistik di Brainly.co.id
 
 <table>
   <tr>
-    <td><b>Username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+    <td><b>Username&nbsp;&nbsp;&nbsp;</b></td>
     <td>{$answer['author']['nick']}</td>
   </tr>
   <tr>
@@ -195,9 +195,17 @@ Statistik di Brainly.co.id
   </tr>
 </table>
 
+Bahasa pemrograman yang sering digunakan:
+
+![Bahasa Pemrograman](https://github-readme-stats.vercel.app/api/top-langs?username=fazbrainly&locale=id&title_color=8bd5ca&text_color=cad3f5&icon_color=c6a0f6&bg_color=24273a&langs_count=20&layout=donut-vertical&hide_border=false)
+
+Donasi:
+
+[![Trakteer](https://custom-icon-badges.demolab.com/badge/Trakteer-Donasi-ed8796?labelColor=302d41&logo=trakteerid&logoColor=d9e0ee&style=for-the-badge)](https://trakteer.id/fazbrainly)
+
 ---
 
-<p align=\"\">Copyright © {$new_year}</p> FΛZ";
+<p align=\"center\">Copyright © {$new_year}</p> FΛZ";
         $file = fopen($readme_file, "w");
         fwrite($file, $readme_content);
         fclose($file);
