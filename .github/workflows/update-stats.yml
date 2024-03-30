@@ -1,0 +1,67 @@
+name: Update Statistics Brainly.co.id
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  checks: read
+  contents: write
+  deployments: read
+  issues: read
+  discussions: read
+  packages: read
+  pages: read
+  pull-requests: write
+  repository-projects: read
+  security-events: read
+  statuses: read
+
+jobs:
+  updateStats:
+    runs-on: ubuntu-latest
+    name: Update statistics
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - name: Setup PHP
+        uses: shivammathur/setup-php@73963f5001e335723c998e4a0125ce060083985c # v2.30.1
+        with:
+          php-version: "3.8"
+
+      # Fix the unsafe repo error which was introduced by the CVE-2022-24765 git patches.
+      - name: Fix unsafe repo error
+        run: git config --global --add safe.directory ${{ github.workspace }}
+
+      - name: Update git repository
+        run: git pull
+
+      - name: Run script
+        run: php stats.php
+        env:
+          QUESTION: "Buat program untuk menentukan apakah suatu nilai yang dimasukkan adalah angka positif, angka negatif, atau angka 0. hasil yang dicetak adalah: - “anda memasukkan angka positif”, “anda memasukkan angka negatif”, dan “anda memasukkan angka 0”​"
+          USERID: "58027659"
+          BR_TOKEN: ${{ secrets.BRAINLY_PERSONAL_TOKEN }}
+
+      - name: Set up Git
+        run: |
+          git config user.name "fazbrainly"
+          git config user.email "146303897+fazbrainly@users.noreply.github.com"
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
+
+      - name: Push commit to a new branch and create pull request
+        run: |
+          branch="update_stats"
+          message="doc: update statistics"
+          if [[ "$(git status --porcelain)" != "" ]]; then
+            git branch -D ${branch} || true
+            git checkout -b ${branch}
+            git add README.md
+            git commit --message "${message}"
+            git remote add origin-${branch} "https://github.com/fazbrainly/fazbrainly.git"
+            git push --force --quiet --set-upstream origin-${branch} ${branch}
+            gh pr create --title "${message}" --body ""
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
