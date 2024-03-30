@@ -29,7 +29,7 @@ Statistik di Brainly.co.id
   </tr>
   <tr>
     <td><b>Terima kasih</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-67-ed8796?labelColor=302d41&logo=love&logoColor=d9e0ee&style=for-the-badge" alt="Terima kasih"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-71-ed8796?labelColor=302d41&logo=love&logoColor=d9e0ee&style=for-the-badge" alt="Terima kasih"/></td>
   </tr>
   <tr>
     <td><b>Jumlah jawaban</b></td>
