@@ -205,7 +205,7 @@ Donasi:
 
 ---
 
-<p align=\"center\">Copyright © {$new_year}</p> FΛZ";
+<p align=\"center\">Copyright © {$new_year} FΛZ</p>";
         $file = fopen($readme_file, "w");
         fwrite($file, $readme_content);
         fclose($file);
