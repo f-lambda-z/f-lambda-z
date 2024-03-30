@@ -25,7 +25,7 @@ Statistik di Brainly.co.id
   </tr>
   <tr>
     <td><b>Teman</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-5-8bd5ca?labelColor=302d41&logo=user-group&logoColor=d9e0ee&style=for-the-badge" alt="Teman"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-6-8bd5ca?labelColor=302d41&logo=user-group&logoColor=d9e0ee&style=for-the-badge" alt="Teman"/></td>
   </tr>
   <tr>
     <td><b>Terima kasih</b></td>
