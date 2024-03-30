@@ -1,6 +1,6 @@
 <?php
 
-$keyword = getenv("QUESTION");
+$keyword = "Buat program untuk menentukan apakah suatu nilai yang dimasukkan adalah angka positif, angka negatif, atau angka 0. hasil yang dicetak adalah: - “anda memasukkan angka positif”, “anda memasukkan angka negatif”, dan “anda memasukkan angka 0”​";
 $readme_file = "README.md";
 
 function format_date($created) {
@@ -119,7 +119,7 @@ if (isset($data["data"]["questions"]["edges"])) {
     $question = $edge["node"];
     if (isset($question["answers"]["nodes"])) {
       foreach ($question["answers"]["nodes"] as $answer) {
-        if ($answer["author"]["databaseId"] != getenv("USERID")) {
+        if ($answer["author"]["databaseId"] != "58027659") {
           continue;
         }
 
