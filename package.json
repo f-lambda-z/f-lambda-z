@@ -1,0 +1,21 @@
+{
+  "name": "@fazbrainly/brainly-stats",
+  "version": "1.0.0",
+  "description": "Load Brainly.co.id profile stats",
+  "main": "stats.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-readme": "ts-node stats.ts"
+  },
+  "author": "FAZ",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "millify": "^6.1.0",
+    "ts-node": "^10.9.2"
+  },
+  "keywords": [
+    "stats",
+    "brainly"
+  ]
+}

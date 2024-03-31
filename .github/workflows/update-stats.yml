@@ -2,15 +2,15 @@ name: Update Statistics Brainly.co.id
 
 on:
   schedule:
-    #        ┌───────────── minute (0 - 59)
-    #        │ ┌───────────── hour (0 - 23)
-    #        │ │  ┌───────────── day of the month (1 - 31)
-    #        │ │  │  ┌───────────── month (1 - 12 or JAN-DEC)
-    #        │ │  │  │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
-    #        │ │  │  │ │
-    #        │ │  │  │ │
-    #        │ │  │  │ │
-    #        * *  *  * *
+    #          ┌──────── minute (0 - 59)
+    #          │  ┌──────── hour (0 - 23)
+    #          │  │ ┌──────── day of the month (1 - 31)
+    #          │  │ │ ┌──────── month (1 - 12 or JAN-DEC)
+    #          │  │ │ │ ┌──────── day of the week (0 - 6 or SUN-SAT)
+    #          │  │ │ │ │
+    #          │  │ │ │ │
+    #          │  │ │ │ │
+    #          *  * * * *
     - cron: "*/30 * * * *"
   workflow_dispatch:
 
@@ -32,13 +32,18 @@ jobs:
   updateStats:
     runs-on: ubuntu-latest
     name: Update statistics
+    strategy:
+      matrix:
+        node-version: [20.x]
+
     steps:
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
-      - name: Setup PHP
-        uses: shivammathur/setup-php@73963f5001e335723c998e4a0125ce060083985c # v2.30.1
+
+      - name: Setup Node
+        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4.0.1
         with:
-          php-version: "8.3"
-          extensions: curl, json
+          node-version: ${{ matrix.node-version }}
+          cache: npm
 
       # Fix the unsafe repo error which was introduced by the CVE-2022-24765 git patches.
       - name: Fix unsafe repo error
@@ -47,9 +52,12 @@ jobs:
       - name: Update git repository
         run: git pull
 
-      - name: Run script
-        run: php stats.php
+      - name: Run npm install and create readme
+        run: |
+          npm ci
+          npm run create-readme
         env:
+          CI: true
           BR_TOKEN: ${{ secrets.BRAINLY_PERSONAL_TOKEN }}
 
       - name: Set up Git
@@ -61,7 +69,8 @@ jobs:
       - name: Push commit to a new branch and create pull request
         run: |
           branch="update_stats"
-          message="doc: update statistics"
+          message="doc: auto update brainly statistics"
+          body=$(printf "## Changes File\n\n\`\`\`diff\n$(git diff)\n\`\`\`\n\n> Co-authored-by: FΛZ <146303897+fazbrainly@users.noreply.github.com>")
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
             git checkout -b ${branch}
@@ -69,7 +78,7 @@ jobs:
             git commit --message "${message}"
             git remote add origin-${branch} "https://github.com/fazbrainly/fazbrainly.git"
             git push --force --quiet --set-upstream origin-${branch} ${branch}
-            gh pr create --title "${message}" --body ""
+            gh pr create --title "${message}" --body "${body}"
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
