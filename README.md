@@ -13,7 +13,7 @@ Statistik di Brainly.co.id
   </tr>
   <tr>
     <td><b>Point</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-7.258-8aadf4?labelColor=302d41&logo=point&logoColor=d9e0ee&style=for-the-badge" alt="Point"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-7.263-8aadf4?labelColor=302d41&logo=point&logoColor=d9e0ee&style=for-the-badge" alt="Point"/></td>
   </tr>
   <tr>
     <td><b>Rank</b></td>
