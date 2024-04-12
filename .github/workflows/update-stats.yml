@@ -66,21 +66,21 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config user.name "fazbrainly"
-          git config user.email "146303897+fazbrainly@users.noreply.github.com"
+          git config user.name "FΛΖ"
+          git config user.email "146303897+f-lambda-z@users.noreply.github.com"
           git config --global --add safe.directory ${GITHUB_WORKSPACE}
 
       - name: Push commit to a new branch and create pull request
         run: |
           branch="update_stats"
           message="doc: auto update brainly statistics"
-          body=$(printf "## Changes File\n\n\`\`\`diff\n$(git diff)\n\`\`\`\n\n> Co-authored-by: FΛZ <146303897+fazbrainly@users.noreply.github.com>")
+          body=$(printf "## Changes File\n\n\`\`\`diff\n$(git diff)\n\`\`\`\n\n> Co-authored-by: FΛZ <146303897+f-lambda-z@users.noreply.github.com>")
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
             git checkout -b ${branch}
             git add README.md
             git commit --message "${message}"
-            git remote add origin-${branch} "https://github.com/fazbrainly/fazbrainly.git"
+            git remote add origin-${branch} "https://github.com/f-lambda-z/f-lambda-z.git"
             git push --force --quiet --set-upstream origin-${branch} ${branch}
             gh pr create --title "${message}" --body "${body}"
           fi

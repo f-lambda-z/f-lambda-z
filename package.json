@@ -1,5 +1,5 @@
 {
-  "name": "@fazbrainly/brainly-stats",
+  "name": "@f-lambda-z/brainly-stats",
   "version": "1.0.0",
   "description": "Load Brainly.co.id profile stats",
   "main": "stats.ts",
