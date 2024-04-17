@@ -13,7 +13,7 @@ Statistik di Brainly.co.id
   </tr>
   <tr>
     <td><b>Point</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-7.263-8aadf4?labelColor=302d41&logo=point&logoColor=d9e0ee&style=for-the-badge" alt="Point"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-8.296-8aadf4?labelColor=302d41&logo=point&logoColor=d9e0ee&style=for-the-badge" alt="Point"/></td>
   </tr>
   <tr>
     <td><b>Rank</b></td>
@@ -29,11 +29,11 @@ Statistik di Brainly.co.id
   </tr>
   <tr>
     <td><b>Terima kasih</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-76-ed8796?labelColor=302d41&logo=love&logoColor=d9e0ee&style=for-the-badge" alt="Terima kasih"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-86-ed8796?labelColor=302d41&logo=love&logoColor=d9e0ee&style=for-the-badge" alt="Terima kasih"/></td>
   </tr>
   <tr>
     <td><b>Jumlah jawaban</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-140-a6da95?labelColor=302d41&logo=answer&logoColor=d9e0ee&style=for-the-badge" alt="Jumlah jawaban"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-187-a6da95?labelColor=302d41&logo=answer&logoColor=d9e0ee&style=for-the-badge" alt="Jumlah jawaban"/></td>
   </tr>
   <tr>
     <td><b>Jumlah pertanyaan</b></td>
@@ -41,11 +41,11 @@ Statistik di Brainly.co.id
   </tr>
   <tr>
     <td><b>Jumlah jawaban tercerdas</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-5-eed49f?labelColor=302d41&logo=brilliant&logoColor=d9e0ee&style=for-the-badge" alt="Jumlah jawaban tercerdas"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-6-eed49f?labelColor=302d41&logo=brilliant&logoColor=d9e0ee&style=for-the-badge" alt="Jumlah jawaban tercerdas"/></td>
   </tr>
   <tr>
     <td><b>Jumlah jawaban tercerdas (30 hari terakhir)</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-5-b7bdf8?labelColor=302d41&logo=brilliant&logoColor=d9e0ee&style=for-the-badge" alt="Jumlah jawaban tercerdas"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-1-b7bdf8?labelColor=302d41&logo=brilliant&logoColor=d9e0ee&style=for-the-badge" alt="Jumlah jawaban tercerdas"/></td>
   </tr>
   <tr>
     <td><b>Tingkat</b></td>
@@ -53,7 +53,7 @@ Statistik di Brainly.co.id
   </tr>
   <tr>
     <td><b>User terbantu</b></td>
-    <td><img src="https://custom-icon-badges.demolab.com/badge/-1,4RB-f5bde6?labelColor=302d41&logo=user&logoColor=d9e0ee&style=for-the-badge" alt="User terbantu"/></td>
+    <td><img src="https://custom-icon-badges.demolab.com/badge/-1,9RB-f5bde6?labelColor=302d41&logo=user&logoColor=d9e0ee&style=for-the-badge" alt="User terbantu"/></td>
   </tr>
 </table>
 
